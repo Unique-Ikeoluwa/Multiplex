@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 interface DisplayProps {
   searchTerm: string;
 }
-export interface Movie {
+interface Movie {
   id: number;
   title: string;
   overview: string;
