@@ -5,10 +5,17 @@ import { useTheme } from "next-themes";
 interface DisplayProps {
   searchTerm: string;
 }
+export interface Movie {
+  id: number;
+  title: string;
+  overview: string;
+  poster_path: string;
+  release_date?: string;
+}
 
 const Display: React.FC<DisplayProps> = ({ searchTerm }) => {
   const { theme } = useTheme();
-  const [movies, setMovies] = useState<unknown[]>([]);
+  const [movies, setMovies] = useState<Movie[]>([]);
 
   const apiKey = "2ca22f700bb9eff7e814bfbe16ba6831";
   useEffect(() => {
