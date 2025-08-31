@@ -6,6 +6,7 @@ import { FiMenu } from "react-icons/fi";
 import { PiFediverseLogoBold } from "react-icons/pi";
 import { useTheme } from 'next-themes';
 import { IoSunnySharp } from "react-icons/io5";
+import Link from 'next/link';
 
 
 
@@ -49,7 +50,7 @@ const Nav: React.FC<NavbarProps> = ({ onSearch }) => {
         <input value={search} onChange={(e) => setSearch(e.target.value)} type="text" placeholder='Search...' className={`w-full mt-3 border pl-10 py-1 rounded-lg ${theme=== "dark" ? "bg-gray-700" : "bg-gray-50"} ${theme=== "dark" ? "border-gray-600" : "border-gray-300"} ${theme=== "dark" ? "placeholder-gray-400" : "placeholder-gray-300"} ${theme=== "dark" ? "text-white" : "text-black"} ${theme=== "dark" ? "focus:ring-blue-500" : "focus:ring-blue-400"} placeholder:text-sm ${theme=== "dark" ? "focus:border-blue-500" : "focus:border-blue-400"}`} />
         <button type='submit' className='relative left-3 -top-[26px] text-lg text-gray-400 '><HiSearch /></button>
         <div className={`flex flex-col p-4 border rounded-lg ${theme=== "dark" ? "bg-gray-800" : "bg-gray-100"} ${theme=== "dark" ? "border-gray-700" : "border-gray-50"}`}>
-          <a href='/' className='py-2 pl-3 pr-4 rounded text-white bg-blue-700 font-bold'>Home</a>
+          <Link href='/' className='py-2 pl-3 pr-4 rounded text-white bg-blue-700 font-bold'>Home</Link>
           <a href='#' className={`py-2 pl-3 pr-4 ${theme=== "dark" ? "text-white" : "text-gray-900"} rounded hover:bg-gray-100 font-bold`}>Popular</a>
           <a href='#' className={`py-2 pl-3 pr-4 ${theme=== "dark" ? "text-white" : "text-gray-900"} rounded hover:bg-gray-100 font-bold`}>Top Rated</a>
           <a href='#' className={`py-2 pl-3 pr-4 ${theme=== "dark" ? "text-white" : "text-gray-900"} rounded hover:bg-gray-100 font-bold`}>Upcoming</a>

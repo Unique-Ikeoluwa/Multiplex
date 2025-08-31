@@ -6,6 +6,7 @@ import { IoMoonSharp } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
 import { useTheme } from 'next-themes';
 import { IoSunnySharp } from "react-icons/io5";
+import Link from 'next/link';
 
 
 
@@ -35,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ onSearch }) => {
           <span className={`${theme === "dark" ? "text-white" : "text-black"}`}>Multiplex</span>
         </div>
         <div className={`${theme === "dark" ? "text-white" : "text-gray-900"} gap-10 flex`}>
-          <a className='text-blue-700 font-semibold' href="/">Home</a>
+          <Link className='text-blue-700 font-semibold' href="/">Home</Link>
           <a className='hover:text-blue-700 font-semibold'  href="">Popular</a>
           <a className='hover:text-blue-700 font-semibold' href="">Top Rated</a>
           <a className='hover:text-blue-700 font-semibold' href="">Upcoming</a>
