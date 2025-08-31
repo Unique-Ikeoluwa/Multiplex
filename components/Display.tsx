@@ -8,7 +8,7 @@ interface DisplayProps {
 
 const Display: React.FC<DisplayProps> = ({ searchTerm }) => {
   const { theme } = useTheme();
-  const [movies, setMovies] = useState<any[]>([]);
+  const [movies, setMovies] = useState<unknown[]>([]);
 
   const apiKey = "2ca22f700bb9eff7e814bfbe16ba6831";
   useEffect(() => {
@@ -38,7 +38,7 @@ const Display: React.FC<DisplayProps> = ({ searchTerm }) => {
             theme === "dark" ? "text-white" : "text-gray-700"
           }`}
         >
-          Result for '{searchTerm}'
+          Result for &apos;{searchTerm}&apos;
         </h2>
       )}
       <div className="grid grid-cols-1 md:grid-cols-3">
